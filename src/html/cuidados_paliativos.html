@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidados Paliativos – Estancia Das Patas Clínica Veterinária</title>
+    <meta name="description" content="Cuidados Paliativos na Estancia das Patas: oferecendo conforto, dignidade e qualidade de vida para pets com doenças crônicas ou em fase terminal.">
+
+    <!-- Google Fonts: Montserrat & Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Seu CSS Principal -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Estilos específicos para esta página (reutilizados das páginas anteriores) -->
+    <style>
+        /* HERO ESPECÍFICO PARA PÁGINAS DE SERVIÇO */
+        .service-hero {
+            padding: 80px 0;
+            background-image: linear-gradient(rgba(31, 41, 55, 0.7), rgba(31, 41, 55, 0.7)), url('https://images.unsplash.com/photo-1560807707-8cc77767d783?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--color-white);
+            text-align: center;
+        }
+
+        .service-hero h1 {
+            color: var(--color-white);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        .service-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        /* SEÇÃO DE INTRODUÇÃO */
+        #intro-paliativos .container {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 40px;
+        }
+
+        #intro-paliativos .intro-image img {
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        #intro-paliativos .intro-text h2 {
+            text-align: left;
+        }
+
+        #intro-paliativos .section-divider {
+            margin: 0 0 30px 0;
+        }
+
+        /* SEÇÃO DE SERVIÇOS/PROCEDIMENTOS */
+        #paliativos-servicos {
+            background-color: var(--color-light-gray);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-item {
+            background-color: var(--color-white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .service-item .icon {
+            font-size: 2rem;
+            color: var(--color-secondary-blue);
+            min-width: 40px;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        /* PERFIL DO ESPECIALISTA */
+        #paliativos-perfil .equipe-card {
+            max-width: 350px;
+            margin: 40px auto 0;
+        }
+
+        /* CTA FINAL */
+        #cta-paliativos {
+            background-color: var(--color-primary-light);
+            text-align: center;
+        }
+
+        #cta-paliativos h2 {
+            margin-bottom: 30px;
+        }
+
+        /* RESPONSIVIDADE */
+        @media (min-width: 768px) {
+            #intro-paliativos .container {
+                flex-direction: row;
+                gap: 60px;
+            }
+            .intro-image, .intro-text {
+                flex: 1;
+            }
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="/../Template 3 ( Veterinario)/index.html" class="logo">
+                <img src="../imgs/EstanciaDasPatas.png" alt="DaniDog Logo">
+            </a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav" id="main-nav">
+                <ul class="nav-list">
+                    <li><a href="/../Template 3 ( Veterinario)/index.html#sobre">Sobre Nós</a></li>
+                    <li><a href="../html/emergencia_24h.html">Emergência 24H</a></li>
+                    <li class="dropdown" id="dropdown-menu">
+                        <a href="../html/especialidades.html">Especialidades <i class="fas fa-chevron-down fa-xs"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="anestesiologista.html">Anestesiologia</a></li>
+                            <li><a href="cardiologia.html">Cardiologia</a></li>
+                            <li><a href="cuidados_paliativos.html">Cuidados Paliativos</a></li>
+                            <li><a href="endocrinologia.html">Endocrinologia</a></li>
+                            <li><a href="gastro.html">Gastroenterologia</a></li>
+                            <li><a href="neurologia.html">Neurologia</a></li>
+                            <li><a href="nutricao_veterinaria.html">Nutrição Veterinária</a></li>
+                            <li><a href="pneumologia.html">Pneumologia</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/../Template 3 ( Veterinario)/index.html#equipe">Equipe</a></li>
+                    <li><a href="/../Template 3 ( Veterinario)/index.html#contato">Contato</a></li>
+                    <li class="btn-agende"><a href="#">Agende Aqui</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="service-hero" class="service-hero">
+            <div class="container">
+                <h1>Cuidados Paliativos</h1>
+                <p>Conforto, dignidade e amor em cada momento.</p>
+                <a href="#contato" class="btn">Converse com Nossa Equipe</a>
+            </div>
+        </section>
+
+        <section id="intro-paliativos">
+            <div class="container">
+                <div class="intro-image">
+                    <img src="../imgs/CaoIdoso_cuidados_paliativos.jpg" alt="Cão idoso descansando no colo de um veterinário">
+                </div>
+                <div class="intro-text">
+                    <h2>Mais que Tratamento, um Ato de Amor</h2>
+                    <div class="section-divider"></div>
+                    <p>Os Cuidados Paliativos não significam desistir, mas sim mudar o foco do tratamento da cura para o conforto. Esta especialidade é dedicada a melhorar a qualidade de vida de pets que enfrentam doenças crônicas, progressivas ou terminais.</p>
+                    <p>Na Estancia Das Patas, nossa abordagem é centrada na compaixão. Trabalhamos para controlar a dor e outros sintomas, oferecendo suporte nutricional e emocional não apenas para o paciente, mas para toda a família, garantindo que cada dia seja vivido com a máxima dignidade e o mínimo de sofrimento.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="paliativos-servicos">
+            <div class="container">
+                <h2>Nossa Abordagem de Cuidado e Conforto</h2>
+                <div class="section-divider"></div>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <i class="fas fa-band-aid icon"></i>
+                        <div>
+                            <h3>Manejo Abrangente da Dor</h3>
+                            <p>Utilizamos medicamentos, terapias alternativas e técnicas avançadas para garantir que seu pet esteja o mais confortável e livre de dor possível.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-utensils icon"></i>
+                        <div>
+                            <h3>Suporte Nutricional e de Hidratação</h3>
+                            <p>Adaptamos a dieta e a hidratação para manter a força, o apetite e o bem-estar do animal, prevenindo a desnutrição e a desidratação.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-pills icon"></i>
+                        <div>
+                            <h3>Controle de Sintomas Secundários</h3>
+                            <p>Atuamos no controle de náuseas, vômitos, dificuldades respiratórias e ansiedade, proporcionando alívio e tranquilidade.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-hand-holding-heart icon"></i>
+                        <div>
+                            <h3>Apoio Emocional à Família</h3>
+                            <p>Entendemos que este é um momento difícil. Oferecemos orientação, suporte e um ombro amigo para ajudar os tutores a tomar as melhores decisões.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-home icon"></i>
+                        <div>
+                            <h3>Adaptação do Ambiente</h3>
+                            <p>Orientamos sobre como tornar o ambiente doméstico mais seguro e confortável para o pet, facilitando sua mobilidade e acesso a recursos essenciais.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-leaf icon"></i>
+                        <div>
+                            <h3>Terapias de Suporte</h3>
+                            <p>Integramos terapias como acupuntura e fisioterapia para promover relaxamento, aliviar a dor e melhorar a mobilidade e o bem-estar geral.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="paliativos-perfil">
+            <div class="container">
+                <h2>Nossa Especialista em Cuidado</h2>
+                <div class="section-divider"></div>
+                <article class="equipe-card">
+                    <img src="https://images.unsplash.com/photo-1575425186775-b8de9a427e67?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Foto da Dra. Karina Yazbek">
+                    <h3>Dra. Karina Yazbek<br>CRMV-SP 12345</h3>
+                    <p class="specialty">Dor e Cuidados Paliativos | Terapia Intensiva</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="cta-paliativos">
+            <div class="container">
+                <h2>Podemos ajudar a tornar este momento mais leve?</h2>
+                <p style="text-align: center; max-width: 600px; margin: 0 auto 30px;">Se o seu companheiro enfrenta uma doença crônica, estamos aqui para oferecer suporte, carinho e as melhores opções de conforto.</p>
+                <a href="#contato" class="btn">Converse com Nossa Equipe</a>
+            </div>
+        </section>
+
+    </main>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-info">
+                    <h3>R. Yunes Demétrio Sabag, 335</h3>
+                    <p>Jardim Alvinopolis, Atibaia - SP</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <p>Copyright 2025 © Desenvolvido por <a  style="color: white;"   href="https://www.instagram.com/ryangomesmelo/"><strong>Ryan Gomes</strong></a> </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Lógica para Menu Hambúrguer ---
+            const menuToggle = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+            
+            menuToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+            });
+
+            // --- Lógica para o Dropdown no mobile ---
+            const dropdown = document.getElementById('dropdown-menu');
+            if (dropdown) {
+                const dropdownContent = dropdown.querySelector('.dropdown-content');
+                dropdown.addEventListener('click', (event) => {
+                    if (window.innerWidth < 768) {
+                        event.preventDefault();
+                        if (dropdownContent.style.display === 'block') {
+                            dropdownContent.style.display = 'none';
+                        } else {
+                            dropdownContent.style.display = 'block';
+                        }
+                    }
+                });
+            }
+            
+            // --- Botão "Voltar ao topo" ---
+            const backToTopButton = document.getElementById('back-to-top');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

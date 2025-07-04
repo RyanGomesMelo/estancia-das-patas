@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estancia das Patas – Clínica Veterinária</title>
+    <meta name="description" content="Estancia das Patas: Clínica Veterinária com atendimento emergencial 24H, especialidades, UTI e uma equipe de profissionais apaixonados.">
+
+    <!-- Google Fonts: Montserrat & Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="../Template 3 ( Veterinario)/src/css/style.css">
+    <style>
+      /* === ESTILOS PARA A NOVA SEÇÃO DINÂMICA (ABORDAGEM 2 - REFINADA) === */
+#hero-dynamic {
+    position: relative;
+    width: 100%;
+    /* Define uma altura que funciona bem na maioria dos desktops */
+    height: 90vh; 
+    max-height: 800px; /* Limita a altura máxima em telas muito grandes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -2;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradiente mais escuro na base para ancorar o conteúdo e melhorar contraste */
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.7), rgba(22, 127, 155, 0.6));
+    z-index: -1;
+}
+
+.hero-dynamic .hero-content {
+    z-index: 1;
+    max-width: 900px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero-dynamic .logo-hero {
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 280px;
+    filter: drop-shadow(0 3px 5px rgba(0,0,0,0.5)); /* Adiciona uma sombra sutil à logo */
+}
+        
+.hero-dynamic h1, .hero-dynamic h2 {
+    margin: 5px 0;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+    font-family: 'Questrial', sans-serif;
+    line-height: 1.3;
+}
+
+.hero-dynamic h1 {
+    font-size: 2.6rem;
+    font-weight: 300;
+}
+
+.hero-dynamic h2 {
+    font-size: 2.1rem;
+    font-weight: 300;
+}
+
+/* Garante que o texto digitado tenha um espaço reservado para não "pular" */
+.hero-dynamic .typing-container {
+    min-height: 55px; /* Ajuste este valor se o texto quebrar em 2 linhas */
+}
+
+.typing-cursor {
+    opacity: 1;
+    animation: blink 0.7s infinite;
+    font-weight: bold;
+    color: #d4af37;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.hero-dynamic .btn {
+    margin-top: 40px;
+    background-color: #d4af37;
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.hero-dynamic .btn:hover {
+    background-color: #c09b2e;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* 
+----------------------------------
+Responsividade REFINADA
+----------------------------------
+*/
+
+/* Para Tablets (até 980px) */
+@media (max-width: 980px) {
+    #hero-dynamic {
+        height: 70vh; /* Reduz a altura para tablets */
+    }
+    .hero-dynamic h1 {
+        font-size: 2.2rem;
+    }
+    .hero-dynamic h2 {
+        font-size: 1.8rem;
+    }
+    .hero-dynamic .typing-container {
+        min-height: 50px; 
+    }
+}
+
+/* Para Celulares (até 767px) */
+@media (max-width: 767px) {
+    #hero-dynamic {
+        /* Altura controlada para não dominar a tela */
+        height: 600px;
+        max-height: 85vh; /* Garante que não ultrapasse 85% da tela, mesmo em celulares altos */
+        /* Centraliza o conteúdo um pouco mais para cima */
+        align-items: center; 
+        padding-top: 0; /* Remove o padding anterior para um controle melhor */
+    }
+
+    #hero-dynamic .logo-hero {
+        max-width: 180px; /* Logo ainda menor para um visual mais limpo */
+        margin-bottom: 25px;
+    }
+
+    .hero-dynamic h1 {
+        font-size: 1.6rem; /* Tamanho mais contido e legível */
+        margin: 0;
+    }
+    
+    .hero-dynamic h2 {
+        font-size: 1.3rem; /* Tamanho proporcional */
+        margin: 8px 0;
+    }
+    
+    .hero-dynamic .typing-container {
+        min-height: 40px; /* Altura mínima ajustada para as novas fontes */
+    }
+
+    .hero-dynamic .btn {
+        margin-top: 30px;
+        padding: 12px 28px;
+        font-size: 0.95rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    #hero-dynamic {
+        /* Reduz um pouco mais a altura para telas bem pequenas */
+        height: 550px; 
+    }
+
+    #hero-dynamic .logo-hero {
+        max-width: 160px; /* Logo ainda menor */
+        margin-bottom: 20px;
+    }
+
+    .hero-dynamic h1 {
+        /* Ajuste fino na fonte para garantir que não quebre em duas linhas com facilidade */
+        font-size: 1.4rem; 
+    }
+
+    .hero-dynamic h2 {
+        font-size: 1.1rem;
+    }
+
+    .hero-dynamic .typing-container {
+        min-height: 35px; /* Reduz a altura mínima reservada */
+        width: 100%; /* Garante que o container ocupe a largura para centralização */
+    }
+
+    .hero-dynamic .btn {
+        margin-top: 25px;
+        padding: 10px 22px; /* Botão um pouco mais compacto */
+        font-size: 0.85rem;
+    }
+}
+
+
+@media (max-width: 980px) {
+    .slide img {
+        /* Altura reduzida para tablets */
+        height: 450px;
+    }
+
+    .slider-nav button {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Para Celulares (até 767px) */
+@media (max-width: 767px) {
+    .slide img {
+        /* Altura significativamente reduzida para celulares */
+        height: 350px;
+    }
+
+    .slider-nav button {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .slider-nav {
+        /* Reduz o espaçamento lateral dos botões em telas menores */
+        padding: 0 10px;
+    }
+}
+
+/* Para Telas Muito Pequenas (até 480px) */
+@media (max-width: 480px) {
+    .slide img {
+        /* Uma altura ainda mais compacta para celulares pequenos */
+        height: 280px;
+    }
+}
+
+/* Cor mais clara para o texto do typing na primeira seção */
+#hero-dynamic #typing-1,
+#hero-dynamic #typing-2 {
+    color: #fffbe7; /* tom claro, pode ajustar para outro se quiser */
+    text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+/* Cor mais clara para os títulos fixos na primeira seção */
+#hero-dynamic h1,
+#hero-dynamic h2 {
+    color: #fffbe7;
+}
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="../Template 3 ( Veterinario)/src/imgs/EstanciaDasPatas.png" alt="Estancia das Patas LOGO">
+            </a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav" id="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="../Template 3 ( Veterinario)/src/html/emergencia_24h.html">Emergência 24H</a></li>
+                    <li class="dropdown" id="dropdown-menu">
+                        <a href="../Template 3 ( Veterinario)/src/html/especialidades.html">Especialidades <i class="fas fa-chevron-down fa-xs"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="../Template 3 ( Veterinario)/src/html/anestesiologista.html">Anestesiologia</a></li>
+                            <li><a href="../Template 3 ( Veterinario)/src/html/cardiologia.html">Cardiologia</a></li>
+                            <li><a href="../Template 3 ( Veterinario)/src/html/cuidados_paliativos.html">Cuidados Paliativos</a></li>
+                            <li><a href="../Template 3 ( Veterinario)/src/html/endocrinologia.html">Endocrinologia</a></li>
+                            <li><a href="../Template 3 ( Veterinario)/src/html/gastro.html">Gastroenterologia</a></li>
+                            <li><a href="../Template 3 ( Veterinario)/src/html/neurologia.html">Neurologia</a></li>
+                            <li><a href="../Template 3 ( Veterinario)/src/html/nutricao_veterinaria.html">Nutrição Veterinária</a></li>
+                            <li><a href="../Template 3 ( Veterinario)/src/html/pneumologia.html">Pneumologia</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#equipe">Equipe</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li class="btn-agende"><a href="#">Agende Aqui</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero-dynamic">
+            <video class="hero-video" autoplay loop muted playsinline>
+                <!-- O vídeo do site de referência -->
+                <source src="../Template 3 ( Veterinario)/mp4/section_video.mp4"" type="video/mp4">
+                Seu navegador não suporta vídeos.
+            </video>
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <img src="../Template 3 ( Veterinario)/src/imgs/EstanciaDasPatas.png" alt="Estancia Das Patas LOGO" class="logo-hero">
+                <h1>Sempre a mesma <span id="typing-1"></span></h1>
+                <h2>O mesmo <span id="typing-2"></span></h2>
+                <a href="#contato" class="btn">Marcar Consulta</a>
+            </div>
+        </section>
+        </section>
+        <section id="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <p>Seu pet precisa de ajuda imediata?</p>
+                    <h1>Internação e atendimento emergencial 24H</h1>
+                    <p>Atendimento rápido e de alta complexidade!</p>
+                    <a href="#" class="btn">EMERGÊNCIA - FALE AGORA!</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Cachorro e Gato em emergência">
+                </div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80" alt="Gato decorativo" class="hero-decoration cat">
+            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80" alt="Cachorro decorativo" class="hero-decoration dog">
+        </section>
+
+        <section id="sobre">
+            <div class="container">
+                <h2>Estancia das Patas </h2>
+                <div class="section-divider"></div>
+                <p>Somos uma equipe multidisciplinar de <strong>Médicos Veterinários</strong> apaixonados pela profissão! Comprometidos em oferecer cuidados de excelência para o <strong>Bem-Estar Animal</strong>, unimos paixão, expertise e dedicação em nossos serviços veterinários.</p>
+                <a href="#" class="btn">Saiba mais</a>
+                
+                <div class="about-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-stethoscope"></i>
+                        <h3>Atendimento 24H</h3>
+                        <p>Serviços de emergência disponíveis a qualquer hora do dia ou noite.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>UTI Veterinária</h3>
+                        <p>Unidade de terapia intensiva equipada com tecnologia de ponta.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-user-md"></i>
+                        <h3>Especialistas</h3>
+                        <p>Profissionais altamente qualificados em diversas especialidades.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      
+
+        <section id="slider-section">
+            <div class="slider-container">
+                <div class="slider-wrapper" id="slider-wrapper">
+                    <div class="slide">
+                        <a href="#">
+                            <img src="../Template 3 ( Veterinario)/src/imgs/1.jpg" alt="Banner Promocional">
+                        </a>
+                    </div>
+                    <div class="slide">
+                        <a href="#">
+                            <img src="../Template 3 ( Veterinario)/src/imgs/2.jpg" alt="Banner Promocional">
+                        </a>
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <button id="prev-slide" aria-label="Slide anterior"><i class="fas fa-chevron-left"></i></button>
+                    <button id="next-slide" aria-label="Próximo slide"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="equipe">
+            <div class="container">
+                <h2>Profissionais</h2>
+                <div class="section-divider"></div>
+                <div class="equipe-grid">
+                    <article class="equipe-card">
+                        <img src="https://images.unsplash.com/photo-1575425186775-b8de9a427e67?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Foto da Dra. Karina Yazbek">
+                        <h3>Dra. 4<br>XYZ.</h3>
+                        <p>Doutorada pela XYZ</p>
+                        <p class="specialty">Anestesiologia/Dor e Cuidados Paliativos | Terapia Intensiva</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </article>
+                    <article class="equipe-card">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Foto da Dra. Marcia Kahvegian">
+                        <h3>Dra. 3<br>XYZ.</h3>
+                        <p>Doutorada pela XYZ</p>
+                        <p class="specialty">Anestesiologia | Terapia Intensiva</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </article>
+                    <article class="equipe-card">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Foto do Dr. Ricardo Duarte">
+                        <h3>Dr. 2<br>XYZ.</h3>
+                        <p>Doutorado em Clínica Médica pela XYZP</p>
+                        <p class="specialty">Gastroenterologia | Terapia Intensiva</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </article>
+                    <article class="equipe-card">
+                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Foto da Dra. Denise Simões">
+                        <h3>Dra. 1<br>XYZ.</h3>
+                        <p>Especializada em Clínica Médica pela XYZ</p>
+                        <p class="specialty">Endocrinologia | Terapia Intensiva</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </article>
+                </div>
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="#" class="btn">SAIBA MAIS</a>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="contato">
+            <div class="container">
+                <div class="contact-info">
+                    <h2>Entre em contato conosco e tire suas dúvidas</h2>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:11978716998">(11) 97871-6998</a></li>
+                        <li><i class="far fa-envelope"></i> <a href="mailto:contato@estanciadaspatas.com.br">contato@estanciadaspatas.com.br</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Av. Pref. Antônio Júlio Toledo Garcia Lopes, 4903 - loja 08 sala 1 <br>Jardim Estancia Brasil, Atibaia - SP</span></li>
+                    </ul>
+                    
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps?q=Av.+Pref.+Ant%C3%B4nio+J%C3%BAlio+Toledo+Garcia+Lopes,+4903+-+loja+08+sala+1,+Jardim+Estancia+Brasil,+Atibaia+-+SP&output=embed" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form action="#">
+                        <input type="text" name="name" placeholder="Nome *" required>
+                        <input type="email" name="email" placeholder="E-mail *" required>
+                        <input type="tel" name="phone" placeholder="Telefone">
+                        <textarea name="message" placeholder="Mensagem *" required></textarea>
+                        <button type="submit" class="btn">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-info">
+                    <h3>R. Yunes Demétrio Sabag, 335</h3>
+                    <p>Jardim Alvinopolis, Atibaia - SP</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <p>Copyright 2025 © Desenvolvido por <a  style="color: white;"   href="https://www.instagram.com/ryangomesmelo/"><strong>Ryan Gomes</strong></a> </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Lógica para Menu Hambúrguer ---
+            const menuToggle = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+            
+            menuToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+            });
+
+            // --- Lógica para o Dropdown no mobile ---
+            const dropdown = document.getElementById('dropdown-menu');
+            if (dropdown) {
+                const dropdownContent = dropdown.querySelector('.dropdown-content');
+                dropdown.addEventListener('click', (event) => {
+                    if (window.innerWidth < 768) {
+                        event.preventDefault();
+                        if (dropdownContent.style.display === 'block') {
+                            dropdownContent.style.display = 'none';
+                        } else {
+                            dropdownContent.style.display = 'block';
+                        }
+                    }
+                });
+            }
+
+            // --- Lógica para o Slider de Banners ---
+            const sliderWrapper = document.getElementById('slider-wrapper');
+            if (sliderWrapper) {
+                const slides = document.querySelectorAll('.slide');
+                const prevButton = document.getElementById('prev-slide');
+                const nextButton = document.getElementById('next-slide');
+
+                let currentIndex = 0;
+                const totalSlides = slides.length;
+
+                function updateSliderPosition() {
+                    sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+                }
+
+                nextButton.addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % totalSlides;
+                    updateSliderPosition();
+                });
+
+                prevButton.addEventListener('click', () => {
+                    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                    updateSliderPosition();
+                });
+
+                setInterval(() => {
+                    nextButton.click();
+                }, 5000);
+            }
+            
+            // --- Botão "Voltar ao topo" ---
+            const backToTopButton = document.getElementById('back-to-top');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            // --- Lógica do Efeito de Digitação ---
+            const typeEffect = (element, words, typeSpeed = 150, backSpeed = 75, backDelay = 1500) => {
+                let wordIndex = 0;
+                let charIndex = 0;
+                let isDeleting = false;
+                const cursorSpan = '<span class="typing-cursor">|</span>';
+
+                function type() {
+                    const currentWord = words[wordIndex];
+                    let displayText;
+
+                    if (isDeleting) {
+                        // Apagando
+                        displayText = currentWord.substring(0, charIndex - 1);
+                        charIndex--;
+                    } else {
+                        // Digitanto
+                        displayText = currentWord.substring(0, charIndex + 1);
+                        charIndex++;
+                    }
+
+                    element.innerHTML = `${displayText}${cursorSpan}`;
+
+                    let delay = isDeleting ? backSpeed : typeSpeed;
+
+                    if (!isDeleting && charIndex === currentWord.length) {
+                        // Palavra digitada por completo
+                        delay = backDelay;
+                        isDeleting = true;
+                    } else if (isDeleting && charIndex === 0) {
+                        // Palavra apagada por completo
+                        isDeleting = false;
+                        wordIndex = (wordIndex + 1) % words.length;
+                        delay = 500; // Pequena pausa antes de começar a nova palavra
+                    }
+
+                    setTimeout(type, delay);
+                }
+                
+                type(); // Inicia o efeito
+            };
+            
+            // Elementos e palavras para o efeito
+            const typingElement1 = document.getElementById('typing-1');
+            const words1 = [
+  "dedicação",
+  "compaixão",
+  "atenção",
+  "cuidado",
+  "amor",
+  "respeito",
+  "empatia",
+  "profissionalismo",
+  "responsabilidade",
+  "zelo",
+  "acolhimento",
+  "experiência",
+  "diagnóstico",
+  "prevenção",
+  "tratamento",
+  "confiança",
+  "proteção",
+  "bem-estar",
+  "paciência",
+  "compromisso"
+];
+
+            const typingElement2 = document.getElementById('typing-2');
+            const words2 = [
+  "carinho",
+  "profissionalismo",
+  "saber",
+  "dedicação",
+  "empatia",
+  "atenção",
+  "conhecimento",
+  "experiência",
+  "zelo",
+  "respeito",
+  "acolhimento",
+  "diagnóstico",
+  "prevenção",
+  "paciência",
+  "ética",
+  "confiança",
+  "intuição",
+  "sensibilidade",
+  "comprometimento"
+];
+
+            // Iniciar os efeitos
+            if(typingElement1 && typingElement2) {
+                typeEffect(typingElement1, words1);
+                typeEffect(typingElement2, words2, 170, 85, 1600); // Velocidade um pouco diferente para não ficarem perfeitamente sincronizados
+            }
+
+        });
+    </script>
+</body>
+</html>

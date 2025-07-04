@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastroenterologia – Estancia Das Patas Clínica Veterinária</title>
+    <meta name="description" content="Gastroenterologia Veterinária na Estancia Das Patas: diagnóstico e tratamento para vômitos, diarreias, alergias alimentares e outras doenças do sistema digestivo.">
+
+    <!-- Google Fonts: Montserrat & Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Seu CSS Principal -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Estilos específicos para esta página (reutilizados das páginas anteriores) -->
+    <style>
+        /* HERO ESPECÍFICO PARA PÁGINAS DE SERVIÇO */
+        .service-hero {
+            padding: 80px 0;
+            background-image: linear-gradient(rgba(31, 41, 55, 0.7), rgba(31, 41, 55, 0.7)), url('https://images.unsplash.com/photo-1598808600156-9cb315a6b324?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--color-white);
+            text-align: center;
+        }
+
+        .service-hero h1 {
+            color: var(--color-white);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        .service-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        /* SEÇÃO DE INTRODUÇÃO */
+        #intro-gastro .container {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 40px;
+        }
+
+        #intro-gastro .intro-image img {
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        #intro-gastro .intro-text h2 {
+            text-align: left;
+        }
+
+        #intro-gastro .section-divider {
+            margin: 0 0 30px 0;
+        }
+
+        /* SEÇÃO DE SERVIÇOS/PROCEDIMENTOS */
+        #gastro-servicos {
+            background-color: var(--color-light-gray);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .service-item {
+            background-color: var(--color-white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .service-item .icon {
+            font-size: 2rem;
+            color: var(--color-secondary-blue);
+            min-width: 40px;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        /* PERFIL DO ESPECIALISTA */
+        #gastro-perfil .equipe-card {
+            max-width: 350px;
+            margin: 40px auto 0;
+        }
+
+        /* CTA FINAL */
+        #cta-gastro {
+            background-color: var(--color-primary-light);
+            text-align: center;
+        }
+
+        #cta-gastro h2 {
+            margin-bottom: 30px;
+        }
+
+        /* RESPONSIVIDADE */
+        @media (min-width: 768px) {
+            #intro-gastro .container {
+                flex-direction: row;
+                gap: 60px;
+            }
+            .intro-image, .intro-text {
+                flex: 1;
+            }
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="/../Template 3 ( Veterinario)/index.html" class="logo">
+                <img src="../imgs/EstanciaDasPatas.png" alt="DaniDog Logo">
+            </a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav" id="main-nav">
+                <ul class="nav-list">
+                    <li><a href="/../Template 3 ( Veterinario)/index.html#sobre">Sobre Nós</a></li>
+                    <li><a href="../html/emergencia_24h.html">Emergência 24H</a></li>
+                    <li class="dropdown" id="dropdown-menu">
+                        <a href="../html/especialidades.html">Especialidades <i class="fas fa-chevron-down fa-xs"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="anestesiologista.html">Anestesiologia</a></li>
+                            <li><a href="cardiologia.html">Cardiologia</a></li>
+                            <li><a href="cuidados_paliativos.html">Cuidados Paliativos</a></li>
+                            <li><a href="endocrinologia.html">Endocrinologia</a></li>
+                            <li><a href="gastro.html">Gastroenterologia</a></li>
+                            <li><a href="neurologia.html">Neurologia</a></li>
+                            <li><a href="nutricao_veterinaria.html">Nutrição Veterinária</a></li>
+                            <li><a href="pneumologia.html">Pneumologia</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/../Template 3 ( Veterinario)/index.html#equipe">Equipe</a></li>
+                    <li><a href="/../Template 3 ( Veterinario)/index.html#contato">Contato</a></li>
+                    <li class="btn-agende"><a href="#">Agende Aqui</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="service-hero" class="service-hero">
+            <div class="container">
+                <h1>Gastroenterologia Veterinária</h1>
+                <p>Cuidando da saúde digestiva do seu pet para uma vida mais confortável e feliz.</p>
+                <a href="#contato" class="btn">Agende uma Consulta</a>
+            </div>
+        </section>
+
+        <section id="intro-gastro">
+            <div class="container">
+                <div class="intro-image">
+                    <img src="../imgs/CachorroDeitadoNaGrama_Gastro.jpg" alt="Cachorro deitado na grama parecendo confortável">
+                </div>
+                <div class="intro-text">
+                    <h2>Bem-estar que Começa por Dentro</h2>
+                    <div class="section-divider"></div>
+                    <p>O sistema digestivo é um dos pilares da saúde geral do seu animal de estimação. Vômitos, diarreia, perda de apetite ou dores abdominais são sinais de que algo não vai bem e precisam de atenção especializada.</p>
+                    <p>A Gastroenterologia Veterinária da Estancia das Patas investiga, diagnostica e trata doenças que afetam o estômago, intestinos, pâncreas e fígado. Nossa missão é identificar a causa do problema e criar um plano de tratamento eficaz para restaurar o conforto e a saúde digestiva do seu companheiro.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gastro-servicos">
+            <div class="container">
+                <h2>Diagnósticos e Tratamentos Digestivos</h2>
+                <div class="section-divider"></div>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <i class="fas fa-camera icon"></i>
+                        <div>
+                            <h3>Endoscopia Digestiva</h3>
+                            <p>Um exame minimamente invasivo que nos permite visualizar o interior do esôfago, estômago e intestino, coletar biópsias e até remover corpos estranhos.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-allergies icon"></i>
+                        <div>
+                            <h3>Diagnóstico de Alergias Alimentares</h3>
+                            <p>Investigação e manejo de reações adversas a alimentos, que podem causar problemas de pele e gastrointestinais, através de dietas de exclusão e testes.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-microscope icon"></i>
+                        <div>
+                            <h3>Doenças Inflamatórias Intestinais (DII)</h3>
+                            <p>Diagnóstico e tratamento de inflamações crônicas do trato intestinal, visando controlar os sintomas e melhorar a absorção de nutrientes.</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas-solid fa-cookie-bite icon"></i>
+                        <div>
+                            <h3>Doenças Hepáticas e Pancreáticas</h3>
+                            <p>Cuidado especializado para condições como hepatite, insuficiência pancreática exócrina e pancreatite, com foco em suporte e tratamento direcionado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gastro-perfil">
+            <div class="container">
+                <h2>Nosso Especialista</h2>
+                <div class="section-divider"></div>
+                <article class="equipe-card">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Foto do Dr. Ricardo Duarte">
+                    <h3>Dr. Ricardo Duarte<br>CRMV-SP 98765</h3>
+                    <p class="specialty">Gastroenterologia | Terapia Intensiva</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="cta-gastro">
+            <div class="container">
+                <h2>Problemas digestivos recorrentes?</h2>
+                <p style="text-align: center; max-width: 600px; margin: 0 auto 30px;">Não ignore os sinais. Vômitos ou diarreias frequentes podem indicar uma condição mais séria. Estamos prontos para investigar e ajudar.</p>
+                <a href="#contato" class="btn">Agendar uma Consulta Gastro</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-info">
+                    <h3>R. Yunes Demétrio Sabag, 335</h3>
+                    <p>Jardim Alvinopolis, Atibaia - SP</p>
+                </div>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <p>Estancia das Patas Copyright 2025 © Desenvolvido por <a  style="color: white;"   href="https://www.instagram.com/ryangomesmelo/"><strong>Ryan Gomes</strong></a> </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // --- Lógica para Menu Hambúrguer ---
+            const menuToggle = document.getElementById('menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+            
+            menuToggle.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+            });
+
+            // --- Lógica para o Dropdown no mobile ---
+            const dropdown = document.getElementById('dropdown-menu');
+            if (dropdown) {
+                const dropdownContent = dropdown.querySelector('.dropdown-content');
+                dropdown.addEventListener('click', (event) => {
+                    if (window.innerWidth < 768) {
+                        event.preventDefault();
+                        if (dropdownContent.style.display === 'block') {
+                            dropdownContent.style.display = 'none';
+                        } else {
+                            dropdownContent.style.display = 'block';
+                        }
+                    }
+                });
+            }
+            
+            // --- Botão "Voltar ao topo" ---
+            const backToTopButton = document.getElementById('back-to-top');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
